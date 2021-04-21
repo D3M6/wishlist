@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "An exercise for an introduction to React",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "parcel index.html"
+  },
   "author": "D3M6",
   "license": "ISC",
   "dependencies": {
