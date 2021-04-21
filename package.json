@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel ./src/index.html",
+    "lint": "eslint --fix src/**/*.{js,jsx}",
     "format": "prettier --write \"*.{js,jsx,json,css}\""
   },
   "author": "D3M6",
@@ -28,10 +29,10 @@
   "eslintConfig": {
     "extends": "airbnb",
     "env": {
-      "browser": true
+        "browser": true
     },
     "rules": {
-      "linebreak-style": "off"
+        "linebreak-style": "off"
     }
   },
   "husky": {
