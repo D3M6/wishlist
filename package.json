@@ -1,14 +1,17 @@
 {
   "name": "wishlist",
   "version": "1.0.0",
-  "description": "",
+  "description": "An exercise for an introduction to React",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "D3M6",
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
