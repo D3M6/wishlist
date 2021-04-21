@@ -8,6 +8,10 @@
     "lint": "eslint --fix src/**/*.{js,jsx}",
     "format": "prettier --write \"*.{js,jsx,json,css}\""
   },
+  "keywords": [
+      "parcel",
+      "react"
+  ],
   "author": "D3M6",
   "license": "ISC",
   "dependencies": {
