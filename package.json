@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "An exercise for an introduction to React",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "author": "D3M6",
   "license": "ISC",
   "dependencies": {
