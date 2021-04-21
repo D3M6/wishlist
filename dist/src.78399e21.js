@@ -29566,7 +29566,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../node_modules/classnames/index.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../node_modules/classNames/index.js":[function(require,module,exports) {
 var define;
 /*!
   Copyright (c) 2018 Jed Watson.
@@ -29709,7 +29709,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _classNames = _interopRequireDefault(require("classNames"));
 
 require("./App.css");
 
@@ -29746,7 +29746,7 @@ var App = function App() {
         done = _ref.done;
     return /*#__PURE__*/_react.default.createElement("li", {
       key: text,
-      className: (0, _classnames.default)('wish-list__item', {
+      className: (0, _classNames.default)('wish-list__item', {
         'wish-list__item--done': done
       })
     }, /*#__PURE__*/_react.default.createElement("label", {
@@ -29765,7 +29765,7 @@ var App = function App() {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","classnames":"../node_modules/classnames/index.js","./App.css":"App/App.css"}],"App/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","classNames":"../node_modules/classNames/index.js","./App.css":"App/App.css"}],"App/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
