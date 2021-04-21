@@ -4,7 +4,7 @@
   "description": "An exercise for an introduction to React",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel ./src/index.html"
   },
   "author": "D3M6",
   "license": "ISC",
