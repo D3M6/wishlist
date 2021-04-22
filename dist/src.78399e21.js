@@ -29638,46 +29638,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"App/WishInput/WishInput.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var WishInput = function WishInput() {
-  return /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "wish-input"
-  }, /*#__PURE__*/_react.default.createElement("legend", {
-    className: "wish-input__label"
-  }, "New Wishlist"), /*#__PURE__*/_react.default.createElement("input", {
-    className: "wish-input__field",
-    placeholder: "Enter your wish here"
-  }));
-};
-
-var _default = WishInput;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"App/WishInput/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _WishInput = _interopRequireDefault(require("./WishInput"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _default = _WishInput.default;
-exports.default = _default;
-},{"./WishInput":"App/WishInput/WishInput.jsx"}],"../node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
 /** @license React v16.13.1
  * react-is.development.js
  *
@@ -30648,7 +30609,90 @@ if ("development" !== 'production') {
   // http://fb.me/prop-types-in-prod
   module.exports = require('./factoryWithThrowingShims')();
 }
-},{"react-is":"../node_modules/react-is/index.js","./factoryWithTypeCheckers":"../node_modules/prop-types/factoryWithTypeCheckers.js"}],"../node_modules/classnames/index.js":[function(require,module,exports) {
+},{"react-is":"../node_modules/react-is/index.js","./factoryWithTypeCheckers":"../node_modules/prop-types/factoryWithTypeCheckers.js"}],"App/WishInput/WishInput.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var WishInput = function WishInput(_ref) {
+  var onNewWish = _ref.onNewWish;
+
+  var _useState = (0, _react.useState)(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      newWishText = _useState2[0],
+      setNewWishText = _useState2[1];
+
+  return /*#__PURE__*/_react.default.createElement("fieldset", {
+    className: "wish-input"
+  }, /*#__PURE__*/_react.default.createElement("legend", {
+    className: "wish-input__label"
+  }, "New Wishlist"), /*#__PURE__*/_react.default.createElement("input", {
+    className: "wish-input__field",
+    placeholder: "Enter your wish here",
+    value: newWishText,
+    onChange: function onChange(e) {
+      return setNewWishText(e.target.value);
+    },
+    onKeyUp: function onKeyUp(e) {
+      if (e.key === 'Enter' && newWishText.length) {
+        onNewWish({
+          done: false,
+          text: newWishText
+        });
+        setNewWishText('');
+      }
+    }
+  }));
+};
+
+WishInput.propTypes = {
+  onNewWish: _propTypes.default.func
+};
+WishInput.defaultProps = {
+  onNewWish: function onNewWish() {}
+};
+var _default = WishInput;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js"}],"App/WishInput/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _WishInput = _interopRequireDefault(require("./WishInput"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = _WishInput.default;
+exports.default = _default;
+},{"./WishInput":"App/WishInput/WishInput.jsx"}],"../node_modules/classnames/index.js":[function(require,module,exports) {
 var define;
 /*!
   Copyright (c) 2018 Jed Watson.
@@ -30709,7 +30753,78 @@ var define;
 	}
 }());
 
-},{}],"App/WishList/WishList.jsx":[function(require,module,exports) {
+},{}],"App/WishItem/WishItem.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var WishItem = function WishItem(_ref) {
+  var done = _ref.done,
+      text = _ref.text,
+      id = _ref.id,
+      onDoneChange = _ref.onDoneChange;
+  return /*#__PURE__*/_react.default.createElement("li", {
+    key: id,
+    className: (0, _classnames.default)('wish-list__item', {
+      'wish-list__item--done': done
+    })
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    id: id,
+    name: id,
+    checked: done,
+    type: "checkbox",
+    onChange: function onChange(e) {
+      return onDoneChange(e.target.checked);
+    }
+  }), /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: id
+  }, text));
+};
+
+WishItem.propTypes = {
+  id: _propTypes.default.string,
+  done: _propTypes.default.bool,
+  text: _propTypes.default.string,
+  onDoneChange: _propTypes.default.func
+};
+WishItem.defaultProps = {
+  id: '',
+  done: false,
+  text: '',
+  onDoneChange: function onDoneChange() {}
+};
+var _default = WishItem;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","classnames":"../node_modules/classnames/index.js"}],"App/WishItem/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _WishItem = _interopRequireDefault(require("./WishItem"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = _WishItem.default;
+exports.default = _default;
+},{"./WishItem":"App/WishItem/WishItem.jsx"}],"App/WishList/WishList.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30721,45 +30836,56 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _WishItem = _interopRequireDefault(require("../WishItem"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var WishList = function WishList(_ref) {
-  var wishes = _ref.wishes;
+  var wishes = _ref.wishes,
+      onWishesChange = _ref.onWishesChange;
   return /*#__PURE__*/_react.default.createElement("ul", {
     className: "wish-list"
   }, wishes.map(function (_ref2, i) {
     var text = _ref2.text,
         done = _ref2.done;
-    return /*#__PURE__*/_react.default.createElement("li", {
+    return /*#__PURE__*/_react.default.createElement(_WishItem.default, {
       key: text,
-      className: (0, _classnames.default)('wish-list__item', {
-        'wish-list__item--done': done
-      })
-    }, /*#__PURE__*/_react.default.createElement("label", {
-      htmlFor: "wish".concat(i)
-    }, /*#__PURE__*/_react.default.createElement("input", {
       id: "wish".concat(i),
-      name: "wish".concat(i),
-      type: "checkbox",
-      checked: done
-    }), text));
+      text: text,
+      done: done,
+      onDoneChange: function onDoneChange(value) {
+        var updateWishes = _toConsumableArray(wishes);
+
+        updateWishes[i].done = value;
+        onWishesChange(updateWishes);
+      }
+    });
   }));
 };
 
 WishList.propTypes = {
-  wishes: _propTypes.default.arrayOf(_propTypes.default.shape({
-    done: _propTypes.default.bool,
-    text: _propTypes.default.string
-  }))
+  wishes: _propTypes.default.arrayOf(_propTypes.default.shape(_WishItem.default.propTypes)),
+  onWishesChange: _propTypes.default.func
 };
 WishList.defaultProps = {
-  wishes: []
+  wishes: [],
+  onWishesChange: function onWishesChange() {}
 };
 var _default = WishList;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","classnames":"../node_modules/classnames/index.js"}],"App/WishList/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","../WishItem":"App/WishItem/index.js"}],"App/WishList/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30781,7 +30907,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 require("./App.css");
 
@@ -30791,28 +30917,67 @@ var _WishList = _interopRequireDefault(require("./WishList"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var wishes = [{
-  text: 'Travel to the moon',
-  done: true
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var initialWishes = [{
+  done: true,
+  text: 'Travel to the moon'
 }, {
-  text: 'Go to the gym',
-  done: false
+  done: false,
+  text: 'Go to the gym'
 }, {
-  text: 'Read any book',
-  done: false
+  done: false,
+  text: 'Read any book'
 }, {
-  text: 'Go shopping',
-  done: false
+  done: false,
+  text: 'Go shopping'
 }];
 
 var App = function App() {
+  var _useState = (0, _react.useState)(initialWishes),
+      _useState2 = _slicedToArray(_useState, 2),
+      wishes = _useState2[0],
+      setNewWishes = _useState2[1];
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "app"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Wishlist App"), /*#__PURE__*/_react.default.createElement(_WishInput.default, null), /*#__PURE__*/_react.default.createElement(_WishList.default, {
-    wishes: wishes
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Wishlist App"), /*#__PURE__*/_react.default.createElement(_WishInput.default, {
+    onNewWish: function onNewWish(wish) {
+      return setNewWishes([wish].concat(_toConsumableArray(wishes)));
+    }
+  }), /*#__PURE__*/_react.default.createElement(_WishList.default, {
+    wishes: wishes,
+    onWishesChange: setNewWishes
   }), /*#__PURE__*/_react.default.createElement("button", {
     className: "wish-clear",
-    type: "button"
+    type: "button",
+    onClick: function onClick() {
+      return setNewWishes(wishes.filter(function (wish) {
+        return !wish.done;
+      }));
+    }
   }, "Archive wish"));
 };
 
@@ -30872,7 +31037,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57186" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61419" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
