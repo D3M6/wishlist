@@ -30639,6 +30639,10 @@ function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "und
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+/**
+ * Create a React functional component with prop-types
+ * @returns JSX DOM
+ */
 var WishInput = function WishInput(_ref) {
   var onNewWish = _ref.onNewWish;
 
@@ -30669,13 +30673,25 @@ var WishInput = function WishInput(_ref) {
     }
   }));
 };
+/**
+ * Define propTypes types of attributes
+ */
+
 
 WishInput.propTypes = {
   onNewWish: _propTypes.default.func
 };
+/**
+ * Define propTypes default value for attributes
+ */
+
 WishInput.defaultProps = {
   onNewWish: function onNewWish() {}
 };
+/**
+ * export WishInput component by default
+ */
+
 var _default = WishInput;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js"}],"App/WishInput/index.js":[function(require,module,exports) {
@@ -30785,6 +30801,11 @@ function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "und
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+/**
+ * Create a React functional component with prop-types
+ * Added useEffect to check prop state
+ * @returns JSX DOM
+ */
 var WishItem = function WishItem(_ref) {
   var done = _ref.done,
       text = _ref.text,
@@ -30836,6 +30857,10 @@ var WishItem = function WishItem(_ref) {
     htmlFor: id
   }, text));
 };
+/**
+ * Define propTypes types of attributes
+ */
+
 
 WishItem.propTypes = {
   id: _propTypes.default.string,
@@ -30843,12 +30868,20 @@ WishItem.propTypes = {
   text: _propTypes.default.string,
   onDoneChange: _propTypes.default.func
 };
+/**
+ * Define propTypes default value for attributes
+ */
+
 WishItem.defaultProps = {
   id: '',
   done: false,
   text: '',
   onDoneChange: function onDoneChange() {}
 };
+/**
+ * export WishItem component by default
+ */
+
 var _default = WishItem;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","classnames":"../node_modules/classnames/index.js"}],"App/WishItem/index.js":[function(require,module,exports) {
@@ -30893,6 +30926,10 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+/**
+ * Create a React functional component with prop-types
+ * @returns JSX DOM with components [WishItem]
+ */
 var WishList = function WishList(_ref) {
   var wishes = _ref.wishes,
       onWishesChange = _ref.onWishesChange;
@@ -30915,15 +30952,27 @@ var WishList = function WishList(_ref) {
     });
   }));
 };
+/**
+ * Define propTypes types of attributes
+ */
+
 
 WishList.propTypes = {
   wishes: _propTypes.default.arrayOf(_propTypes.default.shape(_WishItem.default.propTypes)),
   onWishesChange: _propTypes.default.func
 };
+/**
+ * Define propTypes default value for attributes
+ */
+
 WishList.defaultProps = {
   wishes: [],
   onWishesChange: function onWishesChange() {}
 };
+/**
+ * export WishList component by default
+ */
+
 var _default = WishList;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","../WishItem":"App/WishItem/index.js"}],"App/WishList/index.js":[function(require,module,exports) {
@@ -30982,6 +31031,9 @@ function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "und
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+/**
+ * create a default initial array of objects (wish)
+ */
 var initialWishes = [{
   done: true,
   text: 'Travel to the moon'
@@ -30995,6 +31047,10 @@ var initialWishes = [{
   done: false,
   text: 'Go shopping'
 }];
+/**
+ * Create a React functional component
+ * @returns JSX DOM with components [WishInput, Wishlist]
+ */
 
 var App = function App() {
   var _useState = (0, _react.useState)(initialWishes),
@@ -31078,7 +31134,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61419" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60296" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

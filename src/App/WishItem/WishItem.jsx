@@ -1,7 +1,15 @@
+/**
+ * import necessary libraries
+ */
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
+/**
+ * Create a React functional component with prop-types
+ * Component as stateless presentational component with callback 'onDoneChange'
+ * Added useEffect to check prop lifecycle
+ * @returns JSX DOM
+ */
 const WishItem = ({ done, text, id, onDoneChange }) => {
   const [age, setAge] = useState(0);
 
@@ -20,7 +28,7 @@ const WishItem = ({ done, text, id, onDoneChange }) => {
     }
     return () => clearInterval(ageInterval);
   }, [done]);
-  
+
   return (
     <li
       key={id}
@@ -41,19 +49,25 @@ const WishItem = ({ done, text, id, onDoneChange }) => {
     </li>
   );
 };
-
+/**
+ * Define propTypes types of attributes
+ */
 WishItem.propTypes = {
   id: PropTypes.string,
   done: PropTypes.bool,
   text: PropTypes.string,
   onDoneChange: PropTypes.func,
 };
-
+/**
+ * Define propTypes default value for attributes
+ */
 WishItem.defaultProps = {
   id: '',
   done: false,
   text: '',
   onDoneChange: () => {},
 };
-
+/**
+ * export WishItem component by default
+ */
 export default WishItem;

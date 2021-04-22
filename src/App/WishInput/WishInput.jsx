@@ -1,6 +1,13 @@
+/**
+ * import necessary libraries
+ */
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-
+/**
+ * Create a React functional component with prop-types
+ * Component as stateless presentational component with callback 'onNewWish'
+ * @returns JSX DOM
+ */
 const WishInput = ({ onNewWish }) => {
   const [newWishText, setNewWishText] = useState('');
   return (
@@ -21,13 +28,19 @@ const WishInput = ({ onNewWish }) => {
     </fieldset>
   );
 };
-
+/**
+ * Define propTypes types of attributes
+ */
 WishInput.propTypes = {
   onNewWish: PropTypes.func,
 };
-
+/**
+ * Define propTypes default value for attributes
+ */
 WishInput.defaultProps = {
   onNewWish: () => {},
 };
-
+/**
+ * export WishInput component by default
+ */
 export default WishInput;
