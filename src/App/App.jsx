@@ -1,6 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
 import './App.css';
+
+import WishInput from './WishInput';
+import WishList from './WishList';
 
 const wishes = [
   { text: 'Travel to the moon', done: true },
@@ -12,23 +14,8 @@ const wishes = [
 const App = () => (
   <div className="app">
     <h1>Wishlist App</h1>
-    <fieldset className="wish-input">
-      <legend className="wish-input__label">New Wishlist</legend>
-      <input className="wish-input__field" placeholder="Enter your wish here" />
-    </fieldset>
-    <ul className="wish-list">
-      {wishes.map(({ text, done }, i) => (
-        <li
-          key={text}
-          className={classNames('wish-list__item', { 'wish-list__item--done': done })}
-        >
-          <label htmlFor={`wish${i}`}>
-            <input id={`wish${i}`} name={`wish${i}`} type="checkbox" checked={done} />
-            { text }
-          </label>
-        </li>
-      ))}
-    </ul>
+    <WishInput />
+    <WishList wishes={wishes} />
     <button className="wish-clear" type="button">
       Archive wish
     </button>
